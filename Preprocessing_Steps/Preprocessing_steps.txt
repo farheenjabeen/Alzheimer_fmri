@@ -1,0 +1,27 @@
+
+Preprocessing Steps:
+
+1. DCM to NII Convertion
+	- DCM to NII conveter Tool: \Tools\xiangruili-dicm2nii-ae1d301 
+	- Run dcm2nii.m: Give main folder (having subfolders) name as argument 
+
+2. Preprocessing steps with FSL:
+    - Download and Install FSL
+	     . https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation
+    - open 'fsl' in command prompt
+	- open "FEAT FMRI Analysis"
+	- Choose "First Level Analysis","Preprocessing"
+	- Select "Number of Inputs" and enter data files path
+	- See settings Step1.JPG, Step2.JPG, Step3.JPG, Step4.JPG
+	- Choose "Go"
+	- Output: The processed data will be saved in separte foders as "Resting_State_fMRI_***_*_****.feat"
+
+3. Converting NII to PNG
+    - Run 'nifti2png.m' script in MATLAB
+	- Output: .png images in their respective folders (per subject/scan)
+	
+4.  Make LMDB:
+	- Run script 'create_lmdb_Alzheimers_*.py' (give input/output folder paths)
+
+			
+			
